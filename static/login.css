@@ -1,0 +1,111 @@
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+body {
+font-family: Arial;
+background: url("background1.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+text-align: center;
+font-family: AR DESTINE;
+}
+
+img{
+	margin: 0 auto;
+	height: 200px;
+}
+
+.login {
+margin: 20px auto;
+}
+.login-screen {
+background-color: transparent;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: #2c36fc;
+font-family: AR DESTINE;
+font-size: 2em;
+text-decoration: underline;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+input {
+text-align: center;
+background-color: transparent;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 1em;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+  border: 2px solid transparent;
+  font-family: AR DESTINE;
+  background: gold;
+  color: #111;
+  font-size: 2em;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 7px;
+  box-shadow: none;
+  transition: 1s;
+  display: block;
+  width: 250px;
+  margin: 30px auto;
+}
+
+.btn:hover {
+  background-color: #111;
+  color: gold;
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder{
+    color: #111 !important;
+}
+input:-moz-placeholder{
+    color: #111 !important;
+}
+input::-moz-placeholder{
+    color: #111 !important;
+}
+input:-ms-input-placeholder{
+    color: #111 !important;
+}
+
+.login-link {
+  font-size: 1em;;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}
+
+.flashes{
+    color: red;
+    font-size: 1.2em;
+    padding: 7px;
+    font-family: AR DESTINE;
+}
