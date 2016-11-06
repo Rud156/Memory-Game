@@ -8,7 +8,7 @@ body{
     overflow: auto;
     transition-duration: 1s;
     text-align: center;
-    background: url('background.jpg');
+    background: url('background0.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -98,7 +98,7 @@ button{
 }
 #gameName{
     color: chartreuse;
-    padding-top: 7%;
+    padding-top: 5%;
 }
 #userName, #score, #logOut, #level{
     float: left;
@@ -158,7 +158,7 @@ button{
     cursor: pointer;
 }
 #mainGame{
-    margin-top: 7%;
+    margin-top: 2%;
 }
 #gameHolder{
     width: 60%;
@@ -170,6 +170,13 @@ button{
 }
 #mainGame{
     display: none;
+}
+#progressReport{
+    margin-bottom: 3%;
+    color: darkorange;
+    font-size: 1.2em;
+    display: block;
+    opacity: 0;
 }
 
 
