@@ -1,6 +1,6 @@
 # Memory-Game
 
-# A simple memory game based on a closed ended hackathon
+# A simple memory game made during a closed ended hackathon
 
 
 Requirements to run the application:
