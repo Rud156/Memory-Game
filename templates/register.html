@@ -55,13 +55,20 @@
 			$(document).ready(function(){
 				button.disabled = true;
 			});
+			
+			$('#firstPass').keyup(function(){
+				if(firstPass.value === secondPass.value && firstPass.value !== "" && secondPass.value !== ""){
+					message.innerHTML = "Passwords match";
+					button.disabled = false;
+				}
+			});
 
 			$("#secondPass").keyup(function(){
-				if(firstPass.value !== secondPass.value){
+				if(firstPass.value !== secondPass.value && firstPass.value !== "" && secondPass.value !== ""){
 					message.innerHTML = "Passwords do not match";
 					button.disabled = true;
 				}
-				else{
+				else if(firstPass.value === secondPass.value  && firstPass.value !== "" && secondPass.value !== ""){
 					message.innerHTML = "Passwords match";
 					button.disabled = false;
 				}
