@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Registration Form</title>
-		<link rel="stylesheet" href="../static/login.css">
-		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link rel="stylesheet" href="../static/login.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+		<link rel="shortcut icon" type="image/x-icon" href="../static/Icon.ico"/>
 		<script src="../static/jquery-2.2.3.js"></script>
 	</head>
 
@@ -61,6 +62,10 @@
 				if(firstPass.value === secondPass.value && firstPass.value !== "" && secondPass.value !== ""){
 					message.innerHTML = "Passwords match";
 					button.disabled = false;
+				}
+				else if(firstPass.value !== secondPass.value  && firstPass.value !== "" && secondPass.value !== ""){
+					message.innerHTML = "Passwords do not match";
+					button.disabled = true;
 				}
 			});
 
