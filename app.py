@@ -55,7 +55,8 @@ def register():
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
             users.insert({'_id': request.form['username'], 'name': request.form['username'], 'password': hashpass, 'score': 0, 'level': 1})
-
+            message = Markup("Registration successfull. Please login to continue...")
+            flash(message)
             return redirect(url_for('index'))
 
 
