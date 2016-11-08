@@ -10,7 +10,7 @@ background: url("background1.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 text-align: center;
-font-family: AR DESTINE;
+font-family: 'Lobster', cursive;
 }
 
 img{
@@ -29,7 +29,7 @@ border-radius: 5px
 .app-title {
 text-align: center;
 color: #2c36fc;
-font-family: AR DESTINE;
+font-family: 'Lobster', cursive;
 font-size: 2em;
 text-decoration: underline;
 }
@@ -60,7 +60,7 @@ box-shadow: none;
 
 .btn {
   border: 2px solid transparent;
-  font-family: AR DESTINE;
+  font-family: 'Lobster', cursive;
   background: gold;
   color: #111;
   font-size: 2em;
@@ -110,5 +110,5 @@ input:-ms-input-placeholder{
     color: red;
     font-size: 1.2em;
     padding: 7px;
-    font-family: AR DESTINE;
+    font-family: 'Lobster', cursive;
 }

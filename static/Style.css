@@ -4,7 +4,7 @@ body{
     margin: 0;
     height: 100%;
     cursor: default;
-    font-family: AR DESTINE;
+    font-family: 'Lobster', cursive;
     overflow: auto;
     transition-duration: 1s;
     text-align: center;
@@ -48,7 +48,7 @@ form{
 button{
   background: transparent;
   border: none;
-  font-family: AR DESTINE;
+  font-family: 'Lobster', cursive;
 }
 .gameButton{
     font-size: 2em;
