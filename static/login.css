@@ -44,7 +44,7 @@ margin-bottom: 10px;
 
 input {
 text-align: center;
-background-color: transparent;
+background-color: #ffffff4d;
 border: 2px solid transparent;
 border-radius: 3px;
 font-size: 1em;
@@ -84,16 +84,20 @@ box-shadow: none;
 }
 
 input::-webkit-input-placeholder{
-    color: #111 !important;
+    color: black !important;
+    font-weight: bolder;
 }
 input:-moz-placeholder{
-    color: #111 !important;
+    color: black !important;
+    font-weight: bolder;
 }
 input::-moz-placeholder{
-    color: #111 !important;
+    color: black !important;
+    font-weight: bolder;
 }
 input:-ms-input-placeholder{
-    color: #111 !important;
+    color: black !important;
+    font-weight: bolder;
 }
 
 .login-link {
