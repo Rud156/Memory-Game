@@ -6,7 +6,6 @@ box-sizing: border-box;
 	outline: none;
 }
 body {
-font-family: Arial;
 background: url("background1.jpg");
 background-size: cover;
 background-repeat: no-repeat;
