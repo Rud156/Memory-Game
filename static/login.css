@@ -85,18 +85,22 @@ box-shadow: none;
 input::-webkit-input-placeholder{
     color: black !important;
     font-weight: bolder;
+    font-family: 'Lobster', cursive;
 }
 input:-moz-placeholder{
     color: black !important;
     font-weight: bolder;
+    font-family: 'Lobster', cursive;
 }
 input::-moz-placeholder{
     color: black !important;
     font-weight: bolder;
+    font-family: 'Lobster', cursive;
 }
 input:-ms-input-placeholder{
     color: black !important;
     font-weight: bolder;
+    font-family: 'Lobster', cursive;
 }
 
 .login-link {
