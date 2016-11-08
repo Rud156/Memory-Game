@@ -1,12 +1,10 @@
 from flask import Flask, render_template, url_for, request, session, redirect, flash, Markup
-from flask.ext.pymongo import PyMongo
+from flask_pymongo import PyMongo
 import bcrypt
 
 app = Flask(__name__)
-
 app.config['MONGO_DBNAME'] = 'colour_game'
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/colour_game'
-
 mongo = PyMongo(app)
 
 
@@ -44,7 +42,7 @@ def login():
 
     message = Markup("Invalid username or password!")
     flash(message)
-    return render_template('wrong_login.html')
+    return render_template('index.html')
 
 
 @app.route('/register', methods = ['GET', 'POST'])
@@ -56,14 +54,14 @@ def register():
 
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
-            users.insert({ '_id': request.form['username'], 'name': request.form['username'], 'password': hashpass, 'score': 0, 'level': 1})
+            users.insert({'_id': request.form['username'], 'name': request.form['username'], 'password': hashpass, 'score': 0, 'level': 1})
 
             return redirect(url_for('index'))
 
 
         message = Markup("This username is already registered!")
         flash(message)
-        return render_template('wrong_register.html')
+        return render_template('register.html')
 
     return render_template('register.html')
 
