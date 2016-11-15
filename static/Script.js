@@ -10,7 +10,7 @@ var level = parseInt(document.querySelector("#submitLevel").innerHTML);
 var duration = 0.5;
 var notChnaged = true;
 var timesCorrect = 3;
-var currentTimesCorrect = parseInt(document.querySelector("#submitScore").innerHTML) / 5;
+var currentTimesCorrect = (parseInt(document.querySelector("#submitScore").innerHTML) - (level - 1) * 15) / 5;
 var timesIncorrect = 0;
 var currentScore = parseInt(document.querySelector("#submitScore").innerHTML);
 
@@ -29,6 +29,7 @@ var button = document.querySelector("#hideButton");
 if(level === 1 && currentScore === 0)
     button.style.display = "none";
 var context = new AudioContext();
+var volume = context.createGain();
 
 
 function removeOptions(){
@@ -50,7 +51,7 @@ function customProgress(){
     if(level === 1 && currentScore === 0)
         removeOptions();
     else
-        resetProgress();
+        resetProgress(0);
 }
 function displayProgress(){
     playerProgress.fadeTo(500, 1);
@@ -222,7 +223,6 @@ function playOscillator(currentValue){
     var startTime = context.currentTime;
     var oscillator_1 = context.createOscillator();
     var oscillator_2 = context.createOscillator();
-    var volume = context.createGain();
     oscillator_1.type = "sawtooth";
     oscillator_2.type = "sawtooth";
 
@@ -255,7 +255,7 @@ function playStory(){
     setTimeout(removeStory, 10000);
 }
 
-function resetProgress(){
+function resetProgress(value){
     currentScore = 0;
     currentTimesCorrect = 0;
     level = 1;
@@ -266,5 +266,6 @@ function resetProgress(){
     levelNumber.innerHTML = "Level: " + level.toString();
     levelText.innerHTML = " " + level.toString();
     score.innerHTML = "Score: 0";
-    removeOptions();
+    if(value === 0)
+        removeOptions();
 }
